@@ -5,4 +5,6 @@ app.get('/', function(req, res){
    res.send({"Hello": req.query.name?req.query.name:"Pass name in Query String. url/?name=yourname"});
 });
 
-app.listen(3000);
+var port = process.env.port || 3000
+
+app.listen(port);
